@@ -18,7 +18,7 @@
 .palace-wrap{right:-1.5%;top:3%;width:min(69vw,1040px);height:93%;perspective:1500px;filter:drop-shadow(0 38px 55px #050309d8);}
 .palace{inset:4% 4% 0;transform:rotateY(-9deg) rotateX(1deg);transform-style:preserve-3d;}
 .sky{background:radial-gradient(ellipse at 49% 65%,#f0a347 0,#9a4f38 14%,#482335 35%,#21172a 62%,#0a0a17 87%);border-radius:48% 48% 0 0/22% 22% 0 0;box-shadow:inset 0 0 0 8px #2b1825, inset 0 20px 100px #02020a, inset 0 -50px 70px #f2a54622;}
-.sky:after{content:"";position:absolute;inset:3% 2% 0;border:1px solid #f1c66a55;border-bottom:0;border-radius:48% 48% 0 0/22% 22% 0 0;box-shadow:inset 0 0 35px #f6ba5833;pointer-events:none}
+.sky:after{display:none}
 .distant{bottom:16%;height:34%;filter:drop-shadow(0 0 24px #ffc25b78);background:linear-gradient(180deg,#ab6541,#4d2930 54%,#20131e);opacity:.95;}
 .palace-face{left:7%;right:7%;height:78%;border-width:8px;border-color:#e1b96b;border-radius:49% 49% 0 0/27% 27% 0 0;background:linear-gradient(90deg,#24131f 0%,#70412f 7%,#deb56b 9%,#7d5238 11%,#49272b 15%,#65402f 29%,#321a27 50%,#754d36 70%,#42212a 84%,#e4bc6e 89%,#724530 92%,#281523 97%);box-shadow:inset 0 0 0 7px #653a2e,inset 0 0 0 12px #edc879a3,inset 0 0 0 18px #49272a,inset 0 0 58px #ffb85447,0 0 55px #ffb85438,0 30px 35px #050309;transform:translateZ(70px);}
 .palace-face:before{content:"";position:absolute;inset:3% 4% 0;border:1px solid #f7d78482;border-bottom:0;border-radius:49% 49% 0 0/27% 27% 0 0;box-shadow:inset 0 0 0 5px #a772465c,inset 0 0 25px #ffca6930;pointer-events:none;}
@@ -40,15 +40,15 @@
 .window{width:6%;height:17%;border:3px solid #f4d183;background:linear-gradient(90deg,#ffbd5244,#ffe39d99,#ff9d3c55);box-shadow:0 0 12px #ffbc45,0 0 35px #ff8c23b3,inset 0 0 14px #fff1b9aa;}
 .garland{top:12%;height:25%;filter:drop-shadow(0 5px 10px #ff981a98);}
 .garland path{stroke:#efd187;stroke-width:4;filter:drop-shadow(0 2px 3px #643018);}
-.flowerline{top:14%;height:22%;left:8%;right:8%;}
-.marigold{width:21px;height:21px;border-radius:50%;background:radial-gradient(circle at 48% 45%,#fff0a7 0 8%,#ffbd45 13% 28%,#f47d19 30% 53%,#b84417 58% 74%,#532518 78%);box-shadow:0 3px 6px #09050c,0 0 12px #ff9b24c9,0 0 21px #ffb23942;filter:drop-shadow(0 2px 2px #120809);}
+.flowerline{top:15%;height:18%;left:8%;right:8%;}
+.marigold{width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 48% 45%,#fff0a7 0 8%,#ffbd45 13% 28%,#f47d19 30% 53%,#b84417 58% 74%,#532518 78%);box-shadow:0 3px 6px #09050c,0 0 12px #ff9b24c9,0 0 21px #ffb23942;filter:drop-shadow(0 2px 2px #120809);}
 .marigold:before{inset:1px;background:repeating-conic-gradient(#ffe084 0 8deg,#ff9d23 8deg 16deg,#e96b18 16deg 24deg);mask:radial-gradient(circle,transparent 0 13%,#000 19%);}
 .marigold:after{inset:-4px;background:repeating-conic-gradient(#8aa14a 0 10deg,transparent 11deg 24deg);mask:radial-gradient(circle,transparent 0 47%,#000 53%);}
-.garland-canopy{top:9%;left:5%;right:5%;height:27%;z-index:5;filter:drop-shadow(0 7px 11px #ff8f1db3);}
-.garland-inner{top:24%;left:23%;right:23%;height:20%;z-index:7;opacity:.95;}
+.garland-canopy{top:5%;left:7%;right:7%;height:16%;z-index:5;filter:drop-shadow(0 5px 8px #ff8f1d99);}
+.garland-canopy .marigold{width:14px;height:14px;}
 .side-garland{top:26%;height:47%;width:7%;left:13%;right:auto;z-index:7;}
 .side-garland.rightside{left:auto;right:13%;}
-.side-garland .marigold{width:17px;height:17px;}
+.side-garland .marigold{width:15px;height:15px;}
 .leaf-accent{position:absolute;width:10px;height:5px;border-radius:100% 0 100% 0;background:linear-gradient(135deg,#c4b35c,#315d32 70%);box-shadow:0 1px 3px #110c0b;transform:rotate(28deg);}
 .jasmine{width:10px;height:10px;border-radius:50%;background:radial-gradient(circle,#fff8dc 0 18%,#eee2bd 25% 60%,#ab8f5f 75%);box-shadow:0 0 8px #fff1c566;}
 .small-diya{width:30px;height:17px;background:linear-gradient(180deg,#fff0b2 0%,#dfa84f 20%,#a75926 57%,#422018);border:1px solid #ffe19a;box-shadow:0 5px 13px #ffae3cb0,0 0 18px #ffba4d66,inset 0 -3px 5px #4e1b11;}
@@ -118,11 +118,11 @@ let saved={};try{saved=JSON.parse(localStorage.getItem(STORE)||'{}')||{}}catch{}
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;let awakened=!!saved.awake, audio=null, muted=true, micStream=null, micRAF=0, particles=[], petals=[], last=performance.now(), fireworkAt=0, sceneMode=saved.mode||'midnight';
 function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2600)}
 // Palace floral garlands: individually placed flowers follow a suspended catenary.
-for(let i=0;i<58;i++){const f=document.createElement('i');f.className='marigold';let t=i/57;f.style.left=(t*100)+'%';f.style.top=(7+Math.sin(t*Math.PI)*44+(i%4)*1.4)+'%';f.style.transform=`scale(${.8+(i%5)*.09})`;$('#flowerline').append(f)}
+for(let i=0;i<48;i++){const f=document.createElement('i');f.className='marigold';let t=i/47;f.style.left=(t*100)+'%';f.style.top=(7+Math.sin(t*Math.PI)*42+(i%4)*1.4)+'%';f.style.transform=`scale(${.8+(i%5)*.09})`;$('#flowerline').append(f)}
 // Two layered floral torans and jasmine accents create real garland depth around the arch.
 const palaceFace=$('.palace-face');
 function addToran(cls,count,sag,base){const line=document.createElement('div');line.className='flowerline '+cls;for(let i=0;i<count;i++){const t=i/(count-1),cluster=document.createElement('i');cluster.className='marigold';cluster.style.left=(t*100)+'%';cluster.style.top=(base+Math.sin(t*Math.PI)*sag+((i%4)-1.5)*1.2)+'%';cluster.style.transform=`scale(${.65+(i%5)*.075})`;line.append(cluster);if(i%4===1){const leaf=document.createElement('i');leaf.className='leaf-accent';leaf.style.left=(t*100+1.1)+'%';leaf.style.top=(base+Math.sin(t*Math.PI)*sag+8)+'%';line.append(leaf)}if(i%7===2){const jasmine=document.createElement('i');jasmine.className='marigold jasmine';jasmine.style.left=(t*100+1.4)+'%';jasmine.style.top=(base+Math.sin(t*Math.PI)*sag-4)+'%';line.append(jasmine)}}palaceFace.append(line);return line}
-addToran('garland-canopy',48,33,2);addToran('garland-inner',38,27,1);
+addToran('garland-canopy',38,18,0);
 function addVerticalGarland(cls,count){const line=document.createElement('div');line.className='flowerline '+cls;for(let i=0;i<count;i++){const t=i/(count-1),f=document.createElement('i');f.className='marigold';f.style.left=(18+Math.sin(t*Math.PI*5)*16)+'%';f.style.top=(t*100)+'%';f.style.transform=`scale(${.65+(i%4)*.08})`;line.append(f);if(i%3===1){const leaf=document.createElement('i');leaf.className='leaf-accent';leaf.style.left=(48+Math.sin(t*Math.PI*5)*20)+'%';leaf.style.top=(t*100)+'%';line.append(leaf)}}palaceFace.append(line);return line}
 addVerticalGarland('side-garland',21);addVerticalGarland('side-garland rightside',21);
 for(let i=0;i<11;i++){const d=document.createElement('i');d.className='small-diya';$('#diyas').append(d)}
