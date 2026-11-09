@@ -85,6 +85,12 @@
 @media(max-width:850px){.hero{min-height:810px;height:min(950px,100svh);padding:124px 32px 100px;grid-template-columns:1fr;align-items:start}.hero-copy{max-width:55%;width:55%;}.hero h1{font-size:clamp(40px,6vw,65px)}.palace-wrap{top:24%;right:-8%;width:82vw;height:76%;opacity:1}.dock button{min-width:72px}}
 @media(max-width:520px){.hero{height:920px;min-height:920px;padding:110px 22px 100px}.hero-copy{width:100%;max-width:100%;z-index:9;transform:none}.hero h1{font-size:clamp(43px,12vw,58px);line-height:.92}.hero h2{font-size:13px;margin:12px 0 16px}.hero-copy p:not(.eyebrow){max-width:300px;font-size:12px;line-height:1.6}.hero-actions{margin-top:16px}.hero-actions .gold-btn,.hero-actions .outline-btn{padding:11px 12px;font-size:9px}.hero-note{margin-top:13px;font-size:8px}.palace-wrap{top:40%;right:-7%;width:112vw;height:58%;opacity:1}.palace{inset:5% 2% 0}.palace-face{left:5%;right:5%}.flowerline{left:5%;right:5%}.garland-inner{left:20%;right:20%}.side-garland{left:8%;width:8%}.side-garland.rightside{left:auto;right:8%}.diyas-row{left:6%;right:6%;bottom:15%}.small-diya{width:21px;height:13px}.small-diya:before{left:6px}.ledge-diya{display:none}.dock{width:calc(100% - 18px);bottom:max(8px,env(safe-area-inset-bottom))}.dock button{min-width:0;flex:1;padding:8px 3px;font-size:8px}.dock span{font-size:13px}.rangoli-layout{grid-template-columns:1fr}.canvas-frame{max-width:100%;border-radius:28px;padding:10px}.canvas-frame canvas{border-radius:18px}.toolpanel{grid-template-columns:1fr}.arcade-grid{grid-template-columns:1fr}.game-card{min-height:360px}.greeting-layout{grid-template-columns:1fr}.greeting-preview{min-height:420px}}
 
+
+/* Mobile form containment: long native select labels must not widen the greeting grid. */
+.greeting-layout > * { min-width: 0; }
+.formgrid { min-width: 0; grid-template-columns: minmax(0, 1fr); }
+.formgrid label { min-width: 0; grid-template-columns: minmax(0, 1fr); }
+.formgrid input:not([type="checkbox"]), .formgrid textarea, .formgrid select { width: 100%; max-width: 100%; min-width: 0; }
 </style>
 </head>
 <body class="grain">
